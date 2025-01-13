@@ -1,6 +1,6 @@
 {
 	"name": "portfolio",
-	"homepage": "http://lgp00.me/Portfolio/index.html",
+	"homepage": ".",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
