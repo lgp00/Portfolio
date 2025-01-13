@@ -1,6 +1,6 @@
 {
 	"name": "portfolio",
-	"homepage": "https://lgp00.github.io/",
+	"homepage": "https://lgp00.github.io/Portfolio/",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -8,8 +8,8 @@
 		"dev": "vite",
 		"build": "vite build",
 		"preview": "vite preview",
-    "predeploy": "pnpm run build",
-    "deploy": "gh-pages -d dist"
+		"predeploy": "pnpm run build",
+		"deploy": "gh-pages -d dist"
 	},
 	"dependencies": {
 		"gh-pages": "^6.3.0",
