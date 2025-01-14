@@ -1,0 +1,1 @@
+import{_ as t,a as r,b as n,F as o,o as l}from"./index-C9OiSbOJ.js";const s=""+new URL("GabrielThinking-D15Cglmg.png",import.meta.url).href,a={};function i(m,e){return l(),r(o,null,[e[0]||(e[0]=n("h1",null,"About me",-1)),e[1]||(e[1]=n("img",{src:s,alt:"Gabriel Thinking",width:"200px"},null,-1))],64)}const p=t(a,[["render",i]]);export{p as default};
