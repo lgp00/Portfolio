@@ -1,27 +1,37 @@
-<script setup>
-	import HelloWorld from "./components/HelloWorld.vue";
-</script>
+<script setup></script>
 
 <template>
-	<div>
-		<img src="/vite.svg" class="logo" alt="Vite logo" />
+	<div class="content">
+		<router-link to="/">Home</router-link>
+		<router-link to="/About">About</router-link>
 
-		<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+		<router-view v-slot="{ Component }">
+			<transition >
+				<component :is="Component"></component>
+			</transition>
+		</router-view>
 	</div>
-	<HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-	.logo {
-		height: 6em;
-		padding: 1.5em;
-		will-change: filter;
-		transition: filter 300ms;
+<style>
+	.content {
+		width: 40%;
+		min-width: 500px;
+		margin: 0 auto;
+		position: relative;
 	}
-	.logo:hover {
-		filter: drop-shadow(0 0 2em #646cffaa);
+
+	a {
+		font-weight: bold;
+		color: #7a5c3a;
+		text-decoration: none;
+		margin-right: 1em;
 	}
-	.logo.vue:hover {
-		filter: drop-shadow(0 0 2em #42b883aa);
+
+	a:hover,
+	a.router-link-active {
+		color: #d0af8e;
+		border-bottom: 1px solid #d0af8e;
 	}
+
 </style>
