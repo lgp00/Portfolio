@@ -2,7 +2,7 @@
 	<h1 class="ShakyHand">👋</h1>
 	<h1>Welcome <br />traveler</h1>
 
-	<h2>This website under development</h2>
+	<h2>This page is under development</h2>
 	<div class="Sameline">
 		<h1>🚧</h1>
 		<h1 class="ShakyWorker1">👷</h1>
@@ -10,7 +10,8 @@
 		<h1 class="ShakyWorker3">👷‍♀️</h1>
 		<h1>🚧</h1>
 	</div>
-  <h4>Farewell</h4>
+	<h4>Farewell</h4>
+
 </template>
 
 <style scoped>
