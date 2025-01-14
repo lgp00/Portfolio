@@ -10,13 +10,60 @@
 		<h1 class="ShakyWorker3">👷‍♀️</h1>
 		<h1>🚧</h1>
 	</div>
-  <h4>Farewell</h4>
+	<h4 class="GoodByeList"></h4>
 </template>
 
 <style scoped>
-	.Sameline {
-		display: flex;
-		justify-content: center;
+	.GoodByeList::after {
+		display: block;
+		content: "";
+		animation: 30s linear 1s infinite alternate change-text;
+	}
+	@keyframes change-text {
+		0% {
+			content: "Farewell";
+			transform: translatex(5%);
+		}
+		10% {
+			content: "Farewell";
+			transform: translatex(-5%);
+		}
+		20% {
+			content: "So long";
+			transform: translatex(5%);
+		}
+		30% {
+			content: "So long";
+			transform: translatex(-5%);
+		}
+		40% {
+			content: "Take care";
+			transform: translatex(5%);
+		}
+		50% {
+			content: "Take care";
+			transform: translatex(-5%);
+		}
+		60% {
+			content: "See you around";
+			transform: translatex(5%);
+		}
+		70% {
+			content: "See you around";
+			transform: translatex(-5%);
+		}
+		80% {
+			content: "Catch you later";
+			transform: translatex(5%);
+		}
+		90% {
+			content: "Catch you later";
+			transform: translatex(-5%);
+		}
+		100% {
+			content: "Farewell";
+			transform: translatex(5%);
+		}
 	}
 	.ShakyHand {
 		animation: shakyhand 6.5s;
@@ -43,6 +90,10 @@
 			transform: translate(0px, 0px) rotate(0deg);
 			visibility: hidden;
 		}
+	}
+	.Sameline {
+		display: flex;
+		justify-content: center;
 	}
 	.ShakyWorker1 {
 		animation: shakyworker1 0.9s;
