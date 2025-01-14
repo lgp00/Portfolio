@@ -11,7 +11,7 @@
 <template>
 	<h1>Sometimes is good</h1>
 
-	<h2>This page is under development</h2>
+	<h2>This backup page is under development</h2>
 	<h4>Farewell</h4>
 </template>
 
