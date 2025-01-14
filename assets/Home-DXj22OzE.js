@@ -1,0 +1,1 @@
+import{_ as r,c as s,a as o,b as n,F as t,o as l}from"./index-xCoBk0Ed.js";const a={};function m(u,e){return l(),s(t,null,[e[0]||(e[0]=o("h1",null,[n("Sometimes "),o("br"),n("is good")],-1)),e[1]||(e[1]=o("h2",null,"This backup page is under development",-1)),e[2]||(e[2]=o("h4",null,"Farewell",-1))],64)}const i=r(a,[["render",m]]);export{i as default};
