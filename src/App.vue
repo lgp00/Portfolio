@@ -1,19 +1,28 @@
 <script setup></script>
 
 <template>
-	<div class="content">
-		<router-link to="/">Home</router-link>
-		<router-link to="/About">About</router-link>
+	<div>
+		<div>
+			<router-link to="/">Home</router-link>
+			<router-link to="/About">About</router-link>
+		</div>
 
-		<router-view v-slot="{ Component }">
-			<transition >
-				<component :is="Component"></component>
+		<router-view v-slot="{ Component, route }">
+			<transition name="fade" mode="out-in">
+				<div :key="route.name">
+					<component :is="Component"></component>
+				</div>
 			</transition>
 		</router-view>
+    
 	</div>
 </template>
 
 <style>
+	main {
+		will-change: transform, opacity;
+	}
+
 	.content {
 		margin: 0 auto;
 		position: relative;
@@ -27,9 +36,18 @@
 	}
 
 	a:hover,
-	a.router-link-active {
+	a.router-link-exact-active {
 		color: #d0af8e;
 		border-bottom: 1px solid #d0af8e;
 	}
 
+	.fade-enter-from,
+	.fade-leave-to {
+		opacity: 0;
+	}
+
+	.fade-enter-active,
+	.fade-leave-active {
+		transition: opacity 0.6s ease-in-out;
+	}
 </style>

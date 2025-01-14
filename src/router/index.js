@@ -1,25 +1,25 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Home from "../components/Home.vue";
-import About from "../components/About.vue";
+
+const routes = [
+	{
+		path: "/",
+		name: "Home",
+		component: () => import("../views/Home.vue"),
+	},
+	{
+		path: "/About",
+		name: "About",
+		component: () => import("../views/About.vue"),
+	},
+	{
+		path: "/:pathMatch(.*)*",
+		redirect: { name: "Home" },
+	},
+];
 
 const router = createRouter({
 	history: createWebHashHistory(),
-	routes: [
-		{
-			path: "/",
-      name: "Home",
-			component: Home,
-		},
-		{
-			path: "/About",
-      name: "About",
-			component: About,
-		},
-    {
-      path: "/:pathMatch(.*)*",
-      redirect: { name: "Home" }
-    }
-	],
+	routes,
 });
 
 export default router;
