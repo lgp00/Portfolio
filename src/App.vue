@@ -15,8 +15,6 @@
 
 <style>
 	.content {
-		width: 40%;
-		min-width: 500px;
 		margin: 0 auto;
 		position: relative;
 	}
