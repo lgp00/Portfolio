@@ -1,9 +1,12 @@
-<script setup></script>
+<script setup>
+
+</script>
 
 <template>
 	<div>
 		<div>
 			<router-link to="/">Home</router-link>
+      <router-link to="/Secret" v-if="false">Secret</router-link>
 			<router-link to="/About">About</router-link>
 		</div>
 
