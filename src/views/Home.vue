@@ -1,37 +1,117 @@
 <template>
-  <h1 class="ShakyHand" @click="handleClick">👋</h1>
-  <h1>Welcome <br />traveler</h1>
-  <h2>This website is under development</h2>
-  <div class="Sameline">
-    <h1>🚧</h1>
-    <h1 class="ShakyWorker1">👷</h1>
-    <h1 class="ShakyWorker2">👷‍♂️</h1>
-    <h1 class="ShakyWorker3">👷‍♀️</h1>
-    <h1>🚧</h1>
+  <div>
+    <h1 class="ShakyHand" @click="handleClick">👋</h1>
+    <h1>Welcome <br />traveler</h1>
+    <h2>This website is under development</h2>
+    <div class="Sameline">
+      <h1>🚧</h1>
+      <h1 class="ShakyWorker1">👷</h1>
+      <h1 class="ShakyWorker2">👷‍♂️</h1>
+      <h1 class="ShakyWorker3">👷‍♀️</h1>
+      <h1>🚧</h1>
+    </div>
+    <h4 class="GoodByeList"></h4>
+
+    <!-- Modern Minimalist Modal -->
+    <div v-if="isModalVisible" class="modal-overlay" @click="closeModal">
+      <div class="modal-content" @click.stop>
+        <h2>🎉 Secret Discovered! 🎉</h2>
+        <p>You clicked three times to unlock this secret!</p>
+        <button class="close-button" @click="closeModal">Close</button>
+      </div>
+    </div>
   </div>
-  <h4 class="GoodByeList"></h4>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      clickCount: 0,
+      isModalVisible: false, // Controls modal visibility
+    };
+  },
   methods: {
     handleClick() {
-      // Get the App instance to access the parent data property
-      const app = this.$root;
-      
-      // Increment the click count
-      this.clickCount = (this.clickCount || 0) + 1;
-      
-      // When clicked 3 times, set the SecretIsVisible to true
+      this.clickCount++;
       if (this.clickCount === 3) {
-        app.SecretIsVisible = true;
+        this.isModalVisible = true; // Show the modal
+        this.$root.SecretIsVisible = true;
       }
+    },
+    closeModal() {
+      this.isModalVisible = false; // Hide the modal
     },
   },
 };
 </script>
 
 <style scoped>
+/* Modal Overlay (background dim) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content (popup box) */
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-button {
+  background-color: #7a5c3a;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #d0af8e;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 	.GoodByeList::after {
 		display: block;
 		content: "";
