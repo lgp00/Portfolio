@@ -13,9 +13,23 @@
 </template>
 
 <script>
-
+export default {
+  methods: {
+    handleClick() {
+      // Get the App instance to access the parent data property
+      const app = this.$root;
+      
+      // Increment the click count
+      this.clickCount = (this.clickCount || 0) + 1;
+      
+      // When clicked 3 times, set the SecretIsVisible to true
+      if (this.clickCount === 3) {
+        app.SecretIsVisible = true;
+      }
+    },
+  },
+};
 </script>
-
 
 <style scoped>
 	.GoodByeList::after {

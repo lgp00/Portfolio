@@ -1,6 +1,3 @@
-<script>
-</script>
-
 <template>
   <div>
     <div>
@@ -18,6 +15,16 @@
     </router-view>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      SecretIsVisible: false,
+    };
+  },
+};
+</script>
 
 <style>
 	::selection {
