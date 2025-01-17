@@ -1,27 +1,29 @@
-<script setup>
-
+<script>
 </script>
 
 <template>
-	<div>
-		<div>
-			<router-link to="/">Home</router-link>
-      <router-link to="/Secret" v-if="false">Secret</router-link>
-			<router-link to="/About">About</router-link>
-		</div>
-
-		<router-view v-slot="{ Component, route }">
-			<transition name="fade" mode="out-in">
-				<div :key="route.name">
-					<component :is="Component"></component>
-				</div>
-			</transition>
-		</router-view>
+  <div>
+    <div>
+      <router-link to="/">Home</router-link>
+      <router-link to="/Secret" v-if="SecretIsVisible">Secret</router-link>
+      <router-link to="/About">About</router-link>
+    </div>
     
-	</div>
+    <router-view v-slot="{ Component, route }">
+      <transition name="fade" mode="out-in">
+        <div :key="route.name">
+          <component :is="Component"></component>
+        </div>
+      </transition>
+    </router-view>
+  </div>
 </template>
 
 <style>
+	::selection {
+		color: none;
+		background: none;
+	}
 	main {
 		will-change: transform, opacity;
 	}
