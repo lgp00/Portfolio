@@ -112,57 +112,69 @@ export default {
     transform: scale(1);
   }
 }
-	.GoodByeList::after {
-		display: block;
-		content: "";
-		animation: 30s linear 1s infinite alternate change-text;
-	}
-	@keyframes change-text {
-		0% {
-			content: "Farewell";
-			transform: translatex(5%);
-		}
-		10% {
-			content: "Farewell";
-			transform: translatex(-5%);
-		}
-		20% {
-			content: "So long";
-			transform: translatex(5%);
-		}
-		30% {
-			content: "So long";
-			transform: translatex(-5%);
-		}
-		40% {
-			content: "Take care";
-			transform: translatex(5%);
-		}
-		50% {
-			content: "Take care";
-			transform: translatex(-5%);
-		}
-		60% {
-			content: "See you around";
-			transform: translatex(5%);
-		}
-		70% {
-			content: "See you around";
-			transform: translatex(-5%);
-		}
-		80% {
-			content: "Catch you later";
-			transform: translatex(5%);
-		}
-		90% {
-			content: "Catch you later";
-			transform: translatex(-5%);
-		}
-		100% {
-			content: "Farewell";
-			transform: translatex(5%);
-		}
-	}
+.GoodByeList::after {
+  display: block;
+  content: "";
+  animation: 30s ease-in-out 1s infinite alternate change-text;
+}
+
+@keyframes change-text {
+  0% {
+    content: "Farewell";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  10% {
+    content: "Farewell";
+    transform: translateX(-2%);
+    opacity: 0.9;
+  }
+  20% {
+    content: "So long";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  30% {
+    content: "So long";
+    transform: translateX(-2%);
+    opacity: 0.9;
+  }
+  40% {
+    content: "Take care";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  50% {
+    content: "Take care";
+    transform: translateX(-2%);
+    opacity: 0.9;
+  }
+  60% {
+    content: "See you around";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  70% {
+    content: "See you around";
+    transform: translateX(-2%);
+    opacity: 0.9;
+  }
+  80% {
+    content: "Catch you later";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+  90% {
+    content: "Catch you later";
+    transform: translateX(-2%);
+    opacity: 0.9;
+  }
+  100% {
+    content: "Farewell";
+    transform: translateX(2%);
+    opacity: 1;
+  }
+}
 
 	.Sameline {
 		display: flex;
