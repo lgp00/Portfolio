@@ -1,17 +1,21 @@
 <template>
-	<h1 class="ShakyHand">👋</h1>
-	<h1>Welcome <br />traveler</h1>
-
-	<h2>This website is under development</h2>
-	<div class="Sameline">
-		<h1>🚧</h1>
-		<h1 class="ShakyWorker1">👷</h1>
-		<h1 class="ShakyWorker2">👷‍♂️</h1>
-		<h1 class="ShakyWorker3">👷‍♀️</h1>
-		<h1>🚧</h1>
-	</div>
-	<h4 class="GoodByeList"></h4>
+  <h1 class="ShakyHand" @click="handleClick">👋</h1>
+  <h1>Welcome <br />traveler</h1>
+  <h2>This website is under development</h2>
+  <div class="Sameline">
+    <h1>🚧</h1>
+    <h1 class="ShakyWorker1">👷</h1>
+    <h1 class="ShakyWorker2">👷‍♂️</h1>
+    <h1 class="ShakyWorker3">👷‍♀️</h1>
+    <h1>🚧</h1>
+  </div>
+  <h4 class="GoodByeList"></h4>
 </template>
+
+<script>
+
+</script>
+
 
 <style scoped>
 	.GoodByeList::after {
@@ -65,32 +69,7 @@
 			transform: translatex(5%);
 		}
 	}
-	.ShakyHand {
-		animation: shakyhand 6.5s;
-		animation-iteration-count: 1;
-	}
-	@keyframes shakyhand {
-		0% {
-			transform: translate(0px, 0px) rotate(0deg);
-			opacity: 0;
-		}
-		10% {
-			transform: translate(0px, 0) rotate(60deg);
-		}
-		20% {
-			transform: translate(0, 0) rotate(0deg);
-		}
-		30% {
-			transform: translate(0, 0) rotate(60deg);
-		}
-		40% {
-			transform: scale(1.2);
-		}
-		100% {
-			transform: translate(0px, 0px) rotate(0deg);
-			visibility: hidden;
-		}
-	}
+
 	.Sameline {
 		display: flex;
 		justify-content: center;
@@ -210,6 +189,42 @@
 		}
 		100% {
 			transform: translate(1px, -2px) rotate(-1deg);
+		}
+	}
+	/* SHAKY HAND SPECIAL */
+	.ShakyHand {
+		animation: shakyhand 6.5s;
+		align-content: center;
+		/* position: absolute ; */
+		/* animation-iteration-count: 1; */
+	}
+	.ShakyHand:hover {
+		cursor: grab;
+	}
+	.ShakyHand:active {
+		animation: HighFive 3s;
+		transform: scale(2);
+	}
+	@keyframes shakyhand {
+		0% {
+			transform: translate(0px, 0px) rotate(0deg);
+			opacity: 0;
+		}
+		10% {
+			transform: translate(0px, 0) rotate(60deg);
+		}
+		20% {
+			transform: translate(0, 0) rotate(0deg);
+		}
+		30% {
+			transform: translate(0, 0) rotate(60deg);
+		}
+		40% {
+			transform: scale(1.2);
+		}
+		100% {
+			transform: translate(0px, 0px) rotate(0deg);
+			visibility: hidden;
 		}
 	}
 </style>
