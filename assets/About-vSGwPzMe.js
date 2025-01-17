@@ -1,1 +1,0 @@
-import{_ as t,c as r,a as n,F as o,o as l}from"./index-BoICo_VB.js";const s=""+new URL("GabrielThinking-D15Cglmg.png",import.meta.url).href,a={};function i(m,e){return l(),r(o,null,[e[0]||(e[0]=n("h1",null,"About me",-1)),e[1]||(e[1]=n("img",{src:s,alt:"Gabriel Thinking",width:"200px"},null,-1))],64)}const c=t(a,[["render",i]]);export{c as default};
